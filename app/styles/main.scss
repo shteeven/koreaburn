@@ -1,6 +1,14 @@
 // bower:scss
 // endbower
 
+//=====================//
+// ui-bootstrap fixes  //
+//=====================//
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+//=====================//
+// site-wide layout    //
+//=====================//
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -12,12 +20,11 @@ body {
   padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+/*menu and head are mobile first*/
 .header,
-.marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Custom page header */
@@ -32,6 +39,14 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+}
+
+.navbar{
+  z-index: 99;
+  background: rgba(1,1,1,0.6);
+}
+.icon-bar{
+  color: #fff;
 }
 
 /* Custom page footer */

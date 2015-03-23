@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="burnApp">
+  <body ng-app="burnApp" ng-controller="AppCtrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+      <div class="navbar navbar-theme" role="navigation">
+        <div class="navbar-component">
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -33,17 +33,17 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a ng-class="{ active: isActive('/')}" class="navbar-brand" href="#/">burn</a>
+            <a class="navbar-brand" href="#/">Korea Burn</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li ng-class="{ active: isActive('/media')}"><a href="#/media">My Page</a></li>
-              <li ng-class="{ active: isActive('/guides')}"><a href="#/guides">Create</a></li>
-              <li ng-class="{ active: isActive('/participate')}"><a href="#/participate">Browse</a></li>
-              <li ng-class="{ active: isActive('/info')}"><a href="#/info">Discuss</a></li>
-              <li ng-class="{ active: isActive('/principles')}"><a href="#/principles">Test</a></li>
+              <li><a href="#/media">Media</a></li>
+              <li><a href="#/guides">Guides</a></li>
+              <li><a href="#/participate">Participate</a></li>
+              <li><a href="#/info">Information</a></li>
+              <li><a href="#/principles">Principles</a></li>
             </ul>
           </div>
         </div>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+    <div ui-view=""></div>
     </div>
 
     <div class="footer">
