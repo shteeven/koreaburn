@@ -1,6 +1,21 @@
 // bower:scss
 // endbower
 
+//=============================//
+// Sass variable declarations  //
+//=============================//
+$break-xsmall: 481px;
+$break-small: 626px;
+$break-medium: 769px;
+$break-large: 1025px;
+$break-xlarge: 1281px;
+
+$screen-xsmall: "screen and (min-width: "+$break-xsmall+")";
+$screen-small: "screen and (min-width: "+$break-small+")";
+$screen-medium: "screen and (min-width: "+$break-medium+")";
+$screen-large: "screen and (min-width: "+$break-large+")";
+$screen-xlarge: "screen and (min-width: "+$break-xlarge+")";
+
 //=====================//
 // ui-bootstrap fixes  //
 //=====================//
@@ -16,22 +31,24 @@
   padding: 0.2em 0;
 }
 
+//=====================//
+//mobile first presets //
+//=====================//
 body {
   padding: 0;
 }
-
-/*menu and head are mobile first*/
 .header,
 .footer {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* Custom page header */
+//=====================//
+// Custom page header  //
+//=====================//
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -39,14 +56,50 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+  a{
+    color: #fff;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  .nav li a.glyphicon:hover{
+    background: none;
+  }
+  .glyphicon-menu-hamburger{
+    font-size: 1.3em;
+  }
 }
 
 .navbar{
   z-index: 99;
   background: rgba(1,1,1,0.6);
+  border-radius: 0;
+  @media #{$screen-xsmall} {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media screen and (min-width: $break-medium) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
-.icon-bar{
-  color: #fff;
+.masthead-img{
+  background: url("/images/masthead.jpg") center;
+  background-size: cover;
+  height: 100px;
+  width: 100%;
+  @media screen and (min-width: $break-xsmall) {
+    height: 150px;
+  }
+  @media screen and (min-width: $break-medium) {
+    height: 200px;
+  }
+  @media screen and (min-width: $break-large) {
+    height: 250px;
+  }
+  @media screen and (min-width: $break-xlarge) {
+    height: 300px;
+  }
 }
 
 /* Custom page footer */
@@ -85,20 +138,8 @@ body {
   .container {
     max-width: 730px;
   }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
   }
 }

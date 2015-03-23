@@ -52,5 +52,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.controller('AppCtrl', ['$scope', function($scope){
-  $scope.isCollapsed = true;
 }]);
