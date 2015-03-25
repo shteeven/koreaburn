@@ -30,17 +30,31 @@
       <div class="main">
         <div class="header">
           <a href="#/"><div class="masthead-img parent"><h1 class="child">Korea Burn</h1></div></a>
-          <div class="navbar navbar-theme" role="navigation">
-            <a class="col-xs-offset-5 col-xs-2 glyphicon glyphicon-menu-hamburger" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+          <div class="navbar" role="navigation">
+            <a class="col-xs-12 glyphicon glyphicon-menu-hamburger" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
               <span class="sr-only">Toggle navigation</span>
             </a>
-            <div class="col-xs-12">
               <ul collapse="isCollapsed" class="nav navbar-nav">
-                <li><a href="#/event">Event</a></li>
-                <li><a href="#/culture">Culture</a></li>
-                <li><a href="#/information">Information</a></li>
+                <li class="col-xs-6 col-sm-4"><a href="#/event">
+                  <div class="img-overlay">
+                    <img src="images/thumb-1.png" class="img-responsive"/>
+                    <div class="project-overlay"><h3>Event</h3></div>
+                  </div>
+                </a></li>
+                <li class="col-xs-6 col-sm-4"><a href="#/culture">
+                  <div class="img-overlay">
+                    <img src="images/thumb-2.png" class="img-responsive"/>
+                    <div class="project-overlay"><h3>Culture</h3></div>
+                  </div>
+                </a></li>
+                <li class="col-xs-6 col-xs-offset-3 col-sm-offset-0 col-sm-4 "><a href="#/information">
+                  <div class="img-overlay">
+                    <img src="images/thumb-3.png" class="img-responsive"/>
+                    <div class="project-overlay"><h3>Info</h3></div>
+                  </div>
+                </a></li>
               </ul>
-            </div>
+
 
           </div>
 
@@ -92,10 +106,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/culture.js"></script>
+    <script src="scripts/controllers/info.js"></script>
+    <script src="scripts/controllers/event.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
