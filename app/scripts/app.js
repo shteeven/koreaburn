@@ -40,6 +40,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         $scope.items = ['A', 'List', 'Of', 'Items', 'asdf','sdfg','dfgh','fghj','ghjk','hjkl','qwer','qertw','trye'];
       }
     })
+
     // EventState: this is the Event page and all sub-directories of it //
     .state('event', {
       url: '/event',
