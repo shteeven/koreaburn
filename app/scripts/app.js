@@ -111,4 +111,17 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.controller('AppCtrl', ['$scope', function($scope){
+  $scope.aside = false;
+
+  function toggleAside(){
+    $scope.aside = !$scope.aside;
+  }
+  function closeAside(){
+    $scope.aside = false;
+  }
+
+  $scope.closeAside = closeAside;
+  $scope.toggleAside = toggleAside;
+
+
 }]);

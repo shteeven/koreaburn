@@ -23,22 +23,24 @@
 
     <!-- Add your site or application content here -->
     <!--contain body of site-->
-    <div class="aside-nav" style="display: none"></div><!--possible aside nav for later dev-->
-    <div class="body">
-      <div class="img-background"></div>
-      <div class="background-mask"></div>
-      <div class="main">
-        <div class="header">
-          <a href="#/">
-            <div class="masthead-img parent">
-              <h1 class="child">Korea Burn</h1>
-              <h2 class="child hidden-xs">Some inspiring quote here</h2>
-            </div>
-          </a>
-          <div class="navbar" role="navigation">
-            <a class="col-xs-12 glyphicon glyphicon-menu-hamburger" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
-              <span class="sr-only">Toggle navigation</span>
+    <div class="aside-nav" ng-class="{'menu-reveal': aside}"></div>
+    <div class="body" ng-class="{'menu-reveal': aside}">
+      <div class="content-area">
+        <div class="img-background"></div>
+        <div class="background-mask"></div>
+        <div class="main">
+          <div class="header">
+            <button type="button" ng-click="toggleAside()" class="aaa">asdf</button>
+            <a href="#/">
+              <div class="masthead-img parent">
+                <h1 class="child">Korea Burn</h1>
+                <h2 class="child hidden-xs">Some inspiring quote here</h2>
+              </div>
             </a>
+            <div class="navbar" role="navigation">
+              <a class="col-xs-12 glyphicon glyphicon-menu-hamburger" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+              </a>
               <ul collapse="isCollapsed" class="nav navbar-nav">
                 <li class="col-xs-4 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="event.koreaburn2015">
                   <div class="img-overlay">
@@ -59,15 +61,16 @@
                   </div>
                 </a></li>
               </ul>
+            </div>
           </div>
-        </div>
 
-        <div class="container">
-          <div ui-view=""></div>
-        </div>
-        <div class="footer">
           <div class="container">
-            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+            <div ui-view=""></div>
+          </div>
+          <div class="footer">
+            <div class="container">
+              <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+            </div>
           </div>
         </div>
       </div>

@@ -103,8 +103,8 @@ body {
 // Custom page header  //
 //=====================//
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
+  //border-bottom: 1px solid #e5e5e5;
+  //margin-bottom: 10px;
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -126,9 +126,30 @@ body {
     font-size: 1.8em;
     text-align: center;
     padding-top: 13px;
-    padding-bottom: 13px;
+    padding-bottom: 5px;
   }
 }
+
+//=====================//
+// Custom nav aside  //
+//=====================//
+.aside-nav{
+  width: 200px;
+  height: 100%;
+  background-color: blue;
+  right: -200px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+.body {
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-reveal {
+  transform: translateX(-200px);
+}
+//add class .menu-reveal on click
+
 .nav > li > a{
   //background-color: rgba(255,255,255,0);
   @media screen and (max-width: $break-small) {
@@ -174,10 +195,11 @@ body {
   background-image: radial-gradient(circle farthest-corner at center, rgba(237,227,210,.8) 0%, rgba(218,197,159,.8) 100%);
 
   border-radius: 0;
-  padding-bottom: 13px;
+  padding-bottom: 9px;
   padding-left: 10px;
   padding-right: 10px;
   overflow: hidden;
+  margin-bottom: 5px;
   .col-xs-6{
     padding: 0;
   }
@@ -249,7 +271,7 @@ body {
 //=====================//
 // Content page styles //
 //=====================//
-.section{
+.panel{
   /* IE10 Consumer Preview */
   background-image: -ms-radial-gradient(circle, center, farthest-corner, rgba(237,227,210,.8) 0%, rgba(218,197,159,.8) 100%);
   /* Mozilla Firefox */
@@ -263,12 +285,37 @@ body {
   /* W3C Markup, IE10 Release Preview */
   background-image: radial-gradient(circle farthest-corner at center, rgba(237,227,210,.8) 0%, rgba(218,197,159,.8) 100%);
 
-  padding: 8px;
-  border-radius: 5px;
-  margin: 10px 0;
 
+  background-color: transparent;
+  border:none;
+
+  .panel-heading{
+    /* IE10 Consumer Preview */
+    background-image: -ms-radial-gradient(circle, center, farthest-corner, rgba(237,227,210,.5) 0%, rgba(218,197,159,.5) 100%);
+    /* Mozilla Firefox */
+    background-image: -moz-radial-gradient(center, circle farthest-corner, rgba(237,227,210,.5) 0%, rgba(218,197,159,.5) 100%);
+    /* Opera */
+    background-image: -o-radial-gradient(center, circle farthest-corner, rgba(237,227,210,.5) 0%, rgba(218,197,159,.5) 100%);
+    /* Webkit (Safari/Chrome 10) */
+    background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, rgba(237,227,210,.5)), color-stop(1, rgba(218,197,159,.5)));
+    /* Webkit (Chrome 11+) */
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, rgba(237,227,210,.5) 0%, rgba(218,197,159,.5) 100%);
+    /* W3C Markup, IE10 Release Preview */
+    background-image: radial-gradient(circle farthest-corner at center, rgba(237,227,210,.5) 0%, rgba(218,197,159,.5) 100%);
+  }
+
+  .section{
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
 }
-
+.panel-group .panel-heading + .panel-collapse > .panel-body{
+  border-top:none;
+}
+.panel-default > .panel-heading{
+  background-color: transparent;
+}
 
 /* Custom page footer */
 .footer {
@@ -308,6 +355,6 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
   }
 }
