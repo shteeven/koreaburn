@@ -125,22 +125,55 @@ body {
   .glyphicon-menu-hamburger{
     font-size: 1.8em;
     text-align: center;
-    padding-top: 13px;
     padding-bottom: 5px;
   }
 }
 
+.glyphicon {
+  @extend %menu-toggle;
+
+  .glyphicon-menu-hamburger {
+    // too lazy to mess with Bootstraps's specificity
+    padding-top: 0 !important;
+  }
+}
+
 //=====================//
-// Custom nav aside  //
+// Custom nav aside    //
 //=====================//
-.aside-nav{
+%menu-toggle {
+  font-size: 2em;
+  float: right;
+  margin: 0.25em;
+  padding-top: 0;
+  top: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.aside {
   width: 200px;
   height: 100%;
   background-color: blue;
   right: -200px;
   position: absolute;
   transition: all 0.3s ease-in-out;
+
+  &__nav {
+    clear: both;
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+
+    & > li {
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  }
 }
+
 .body {
   transition: all 0.3s ease-in-out;
 }
@@ -148,7 +181,6 @@ body {
 .menu-reveal {
   transform: translateX(-200px);
 }
-//add class .menu-reveal on click
 
 .nav > li > a{
   //background-color: rgba(255,255,255,0);
@@ -358,3 +390,19 @@ body {
     //margin-bottom: 30px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
