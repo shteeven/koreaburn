@@ -23,7 +23,33 @@
 
     <!-- Add your site or application content here -->
     <!--contain body of site-->
-    <div class="aside-nav" ng-class="{'menu-reveal': aside}"></div>
+    <div class="aside-nav" ng-class="{'menu-reveal': aside}">
+      <div class="navbar" role="navigation">
+        <a class="col-xs-12 glyphicon glyphicon-menu-hamburger" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <ul collapse="isCollapsed" class="nav navbar-nav">
+          <li class="col-xs-4 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="event.koreaburn2015">
+            <div class="img-overlay">
+              <img src="images/thumb-1.png" class="img-responsive"/>
+              <div class="project-overlay"><h3>Event</h3></div>
+            </div>
+          </a></li>
+          <li class="col-xs-4 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="culture">
+            <div class="img-overlay">
+              <img src="images/thumb-2.png" class="img-responsive"/>
+              <div class="project-overlay"><h3>Culture</h3></div>
+            </div>
+          </a></li>
+          <li class="col-xs-4 col-sm-offset-0 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="info">
+            <div class="img-overlay">
+              <img src="images/thumb-3.png" class="img-responsive"/>
+              <div class="project-overlay"><h3>Info</h3></div>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+    </div>
     <div class="body" ng-class="{'menu-reveal': aside}">
       <div class="content-area">
         <div class="img-background"></div>
@@ -37,31 +63,6 @@
                 <h2 class="child hidden-xs">Some inspiring quote here</h2>
               </div>
             </a>
-            <div class="navbar" role="navigation">
-              <a class="col-xs-12 glyphicon glyphicon-menu-hamburger" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
-                <span class="sr-only">Toggle navigation</span>
-              </a>
-              <ul collapse="isCollapsed" class="nav navbar-nav">
-                <li class="col-xs-4 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="event.koreaburn2015">
-                  <div class="img-overlay">
-                    <img src="images/thumb-1.png" class="img-responsive"/>
-                    <div class="project-overlay"><h3>Event</h3></div>
-                  </div>
-                </a></li>
-                <li class="col-xs-4 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="culture">
-                  <div class="img-overlay">
-                    <img src="images/thumb-2.png" class="img-responsive"/>
-                    <div class="project-overlay"><h3>Culture</h3></div>
-                  </div>
-                </a></li>
-                <li class="col-xs-4 col-sm-offset-0 col-sm-4"><a ng-click="isCollapsed = !isCollapsed" ui-sref="info">
-                  <div class="img-overlay">
-                    <img src="images/thumb-3.png" class="img-responsive"/>
-                    <div class="project-overlay"><h3>Info</h3></div>
-                  </div>
-                </a></li>
-              </ul>
-            </div>
           </div>
 
           <div class="container">
