@@ -24,6 +24,9 @@ $screen-xlarge: "screen and (min-width: "+$break-xlarge+")";
 //=====================//
 // site-wide layout    //
 //=====================//
+html{
+  height:100%;
+}
 h1,h2{
   font-family: 'Amatic SC', cursive;
   text-shadow: 2px 2px 8px rgba(150, 150, 150, 1);
@@ -36,8 +39,6 @@ p,a,body{
 }
 p{
   color: #ffffff;
-}
-body{
 }
 
 h1{
@@ -53,6 +54,9 @@ h1{
 }
 .content-wrap{
   position: relative;
+  .container{
+    background-color: #3498db;//#2980b9;
+  }
 }
 
 /*====Background====*/
@@ -62,8 +66,6 @@ h1{
   right: 0;
   top: 0;
   bottom: 0;
-  background-image:url("../images/bg-1.png");
-  background-size: cover;
   z-index: 0;
 }
 .background-mask{
@@ -92,7 +94,16 @@ h1{
 //=====================//
 body {
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100%;
+  ul{list-style: none}
+  //background-color: rgb(43,217,153); green
+  //background-color: rgb(242,183,5); orange
+  //background-color: rgb(242,159,5); dark orange
+  //background-color: rgb(78,177,215); //blue
+  //background-color: rgb(23,54,113);
+  background-color: #7f8c8d;
+
 }
 .header,
 .footer {
@@ -125,6 +136,19 @@ body {
   }
 }
 
+.menu-logo{
+  height: 100%;
+  float: right;
+  img{
+    height: 40px;
+  }
+  span{
+    color: white;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 %menu-toggle {
   font-size: 2em;
@@ -157,7 +181,7 @@ body {
 .aside {
   width: 200px;
   height: 100%;
-  background-color: blue;
+  background-color: #16a085;
   right: -200px;
   position: absolute;
   transition: all 0.3s ease-in-out;
@@ -177,8 +201,12 @@ body {
 
 .body {
   transition: all 0.3s ease-in-out;
+  height: 100%;
 }
-
+.main{
+  background-color: #34495e;
+  margin: 50px 15px 20px 15px;
+}
 .menu-reveal {
   transform: translateX(-200px);
 }
@@ -274,7 +302,7 @@ body {
   background: url("/images/masthead-2.png") center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 250px;
   width: 100%;
   @media screen and (min-width: $break-xsmall) {
     //height: 155px;
@@ -327,6 +355,7 @@ body {
 //=====================//
 // Content page styles //
 //=====================//
+
 .panel{
   /* IE10 Consumer Preview */
   background-image: -ms-radial-gradient(circle, center, farthest-corner, rgba(237,227,210,.8) 0%, rgba(218,197,159,.8) 100%);
@@ -404,16 +433,6 @@ body {
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-  /* Space out the masthead */
-  .header {
-    //margin-bottom: 30px;
-  }
-}
 
 
 
